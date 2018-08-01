@@ -55,7 +55,7 @@ function displayMain() {
         inquirer.prompt([{
                 name: "item",
                 type: "input",
-                message: "What is the ID of the product you would like?",
+                message: "What is the ID of the product you would like to buy?",
                 validate: function (value) {
                     if (isNaN(value) === false) {
                         return true;
@@ -66,7 +66,7 @@ function displayMain() {
             {
                 name: "Quantity",
                 type: "input",
-                message: "How many would you like?",
+                message: "How many would you like today?",
                 validate: function (value) {
                     if (isNaN(value) === false) {
                         return true;
@@ -83,18 +83,24 @@ function displayMain() {
             var chosenItem = res[itemID - 1];
             var chosenPrice = chosenItem.price_to_customer * answer.Quantity;
             // console.log(chosenItem);
-            console.log("You purchased " + answer.Quantity);
+            // console.log("You purchased " + answer.Quantity);
             var newQuantity = chosenItem.stock_quantity - answer.Quantity;
-            console.log(newQuantity);
+            // console.log(newQuantity);
             if (newQuantity >= 0) {
                 connection.query('UPDATE products SET ? WHERE item_ID = ? ', [{
                     stock_quantity: newQuantity
                 }, itemID]);
-                console.log("You bought " + answer.Quantity + " " + "and it cost " + "$" + chosenPrice + " for " + chosenItem.product_name + " and there are " + newQuantity + " left");
+                // console.log("You bought " + answer.Quantity + " " + "and it cost " + "$" + chosenPrice + " for " + chosenItem.product_name + " and there are " + newQuantity + " left");
+                console.log("========================");
+                console.log("You bought " + answer.Quantity + " " + chosenItem.product_name);
+                console.log("And it cost you " + "$" + chosenPrice);
+                console.log("There are only " + newQuantity + " remaining");
+                console.log("========================");
                 displayMain();
             } else {
-
+                console.log("========================");
                 console.log("There is not enough inventory available, check back next week.");
+                console.log("========================");
                 displayMain();
             }
 
