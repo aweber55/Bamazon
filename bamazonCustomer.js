@@ -81,6 +81,7 @@ function displayMain() {
             var itemID = answer.item;
             // console.log(itemID);
             var chosenItem = res[itemID - 1];
+            var chosenPrice = chosenItem.price_to_customer * answer.Quantity;
             // console.log(chosenItem);
             console.log("You purchased " + answer.Quantity);
             var newQuantity = chosenItem.stock_quantity - answer.Quantity;
@@ -89,7 +90,7 @@ function displayMain() {
                 connection.query('UPDATE products SET ? WHERE item_ID = ? ', [{
                     stock_quantity: newQuantity
                 }, itemID]);
-                console.log("You bought " + answer.Quantity + " " + chosenItem.product_name + " and there are " + newQuantity + " left");
+                console.log("You bought " + answer.Quantity + " " + "and it cost " + "$" + chosenPrice + " for " + chosenItem.product_name + " and there are " + newQuantity + " left");
                 displayMain();
             } else {
 
