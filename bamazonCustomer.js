@@ -44,7 +44,7 @@ function displayMain() {
         displayTable(res);
         if (err) throw err;
         console.log("=====================");
-        console.log("welcome to Bamazon");
+        console.log("Welcome to Bamazon");
         console.log("====================");
 
         var choiceArray = [];
@@ -77,12 +77,12 @@ function displayMain() {
             }
         ]).then(function (answer) {
 
-            console.log(answer);
+            // console.log(answer);
             var itemID = answer.item;
-            console.log(itemID);
+            // console.log(itemID);
             var chosenItem = res[itemID - 1];
-            console.log(chosenItem);
-
+            // console.log(chosenItem);
+            console.log("You purchased " + answer.Quantity);
             var newQuantity = chosenItem.stock_quantity - answer.Quantity;
             console.log(newQuantity);
             if (newQuantity >= 0) {
