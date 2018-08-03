@@ -23,5 +23,8 @@
 ##### The manager has the prompt choices to view all of the products in the table, check a list of all items with a low inventory of less than 5 in a table, choice to add to inventory of any item that you choose, or the option to create your own item to add to the store. When adding an item, you are prompted to add the item name, then the item department it belongs in, as well as the price, and finally the amount to place in stock. All of these choices are immediatly logged into the MySQL database and reflected back into the stores information. The final option is to exit, which just allows you to quit the app.
 
 
+![manager11](https://user-images.githubusercontent.com/34924373/43668023-badfc5bc-9748-11e8-85c0-8f1bd2724cbd.gif)
+
+
 
 
