@@ -36,7 +36,7 @@ function displayTable(res) {
 
     }
     console.log(table.toString());
-}
+};
 
 function displayMain() {
 
@@ -47,10 +47,10 @@ function displayMain() {
         console.log("Welcome to Bamazon");
         console.log("====================");
 
-        // var choiceArray = [];
-        // for (var i = 0; i < res.length; i++) {
-        //     choiceArray.push(res[i].product_name);
-        // }
+        var choiceArray = [];
+        for (var i = 0; i < res.length; i++) {
+            choiceArray.push(res[i].product_name);
+        }
 
         inquirer.prompt([{
                 name: "item",
@@ -106,4 +106,4 @@ function displayMain() {
 
         })
     })
-}
+};
