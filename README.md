@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Bamazon
 =======
 # My Bamazon Store Front
@@ -13,4 +13,4 @@
 ##### Here is a clip of the typical interaction the customer would have when placing an order.
 
 ![customer11](https://user-images.githubusercontent.com/34924373/43660388-d9b549b0-972c-11e8-8afc-debb34c7913c.gif)
->>>>>>> 6ac3c3bbde7646266e2cd4925240cfdff341729b
+
