@@ -92,7 +92,7 @@ function displayMain() {
                 }, itemID]);
                 // console.log("You bought " + answer.Quantity + " " + "and it cost " + "$" + chosenPrice + " for " + chosenItem.product_name + " and there are " + newQuantity + " left");
                 console.log("========================");
-                console.log("You bought " + answer.Quantity + " " + chosenItem.product_name);
+                console.log("You bought " + answer.Quantity + " '" + chosenItem.product_name + "'");
                 console.log("And it cost you " + "$" + chosenPrice);
                 console.log("There are only " + newQuantity + " remaining");
                 console.log("========================");

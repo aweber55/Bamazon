@@ -102,7 +102,7 @@ function viewLowInv() {
             }
         }
         if (table.length > 0) {
-            console.log("it works!!!!");
+           
             console.log(table.toString());
         } else {
             console.log("==========================");
@@ -168,6 +168,8 @@ function addInventory() {
                     console.log("==========================");
                     console.log("==========================");
                     console.log("Your Inventory has been updated.");
+                    
+                    
                     displayManager();
                 }
             )
@@ -210,7 +212,10 @@ function addProduct() {
             if (err) throw err;
             console.log("==========================");
             console.log("==========================");
-            console.log("Your item " + ans.addName + " has been added to the store!");
+            console.log("Your item '" + ans.addName + "' has been added to the store!");
+           console.log("You can find it in '" + ans.addDepartment + "'");
+           console.log("And it only costs $" + ans.addPrice);
+           console.log("and there are " + ans.addStock + " in stock");
             displayManager();
         })
     })
